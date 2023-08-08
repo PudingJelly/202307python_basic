@@ -1,3 +1,4 @@
+
 '''
 * 반복문 (loop)
 
@@ -10,11 +11,11 @@
 i = 1 #begin
 total = 0
 
-while i <= 10: #end
+while i <= 10: # end
     total += i
-    i += 1 #파이썬은 증감 연산자가 없습니다.(++,--)
+    i += 1 # 파이썬은 증감 연산자가 없습니다. (++, --)
 
-print('1부터 10까지의 누적합: ', total)
+print('1부터 10까지의 누적합:', total)
 
 print('-' * 40)
 
@@ -32,11 +33,21 @@ print('-' * 40)
 x = int(input('정수 1: '))
 y = int(input('정수 2: '))
 
+'''
+if x > y:
+    temp = x
+    x = y
+    y = temp
+'''
+if x > y:
+    x, y = y, x
+    
 total = 0
 
 i = x
+
 while i <= y:
     total += i
     i += 1
 
-print(x, '~',y, '까지의 누적합계: ', total)
+print(x,'~',y,'까지의 누적합계:',total)
